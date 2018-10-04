@@ -14,7 +14,7 @@ namespace WeatherApp.Core
         {
             HttpClient client = new HttpClient();
             var response = await client.GetAsync(queryString);
-
+            
             dynamic data = null;
             if(response != null)
             {
