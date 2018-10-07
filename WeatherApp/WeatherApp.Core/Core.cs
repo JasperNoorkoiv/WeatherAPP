@@ -16,7 +16,8 @@ namespace WeatherApp.Core
             var weather = new Weather();
             weather.Temperature = (string)results["main"]["temp"] + " C";
             weather.Pressure = (string)results["main"]["pressure"] + " hPa";
-            weather.Wind = (string)results["main"]["wind"] + " m/s";
+            weather.Wind = (string)results["wind"]["speed"] + " m/s";
+            weather.City = (string)results["name"];
             return weather;
         }
     }

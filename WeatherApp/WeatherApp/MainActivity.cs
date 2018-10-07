@@ -10,17 +10,24 @@ namespace WeatherApp
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        TextView textView;
+        TextView textView1;
+        TextView textView2;
+        TextView textView3;
+        SearchView searchView;
+        Button button;
+
+
         protected  override  void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            var button = FindViewById<Button>(Resource.Id.button1);
-            textView = FindViewById<TextView>(Resource.Id.textView1);
-            textView = FindViewById<TextView>(Resource.Id.textView2);
-            textView = FindViewById<TextView>(Resource.Id.textView3);
+            button = FindViewById<Button>(Resource.Id.button1);
+            var textView1 = FindViewById<TextView>(Resource.Id.textView1);
+            var textView2= FindViewById<TextView>(Resource.Id.textView2);
+            var textView3 = FindViewById<TextView>(Resource.Id.textView3);
+            searchView = FindViewById<SearchView>(Resource.Id.searchView1);
 
             button.Click += Button_Click;
         }
@@ -28,9 +35,9 @@ namespace WeatherApp
         private async void Button_Click(object sender, System.EventArgs e)
         {
             var weather = await Core.Core.GetWeather("asd");
-            textView.Text = weather.Temperature;
-            textView.Text = weather.Pressure;
-            textView.Text = weather.Wind;
+            textView1.Text = weather.Temperature;
+            textView2.Text = weather.Pressure;
+            textView3.Text = weather.Wind;
         }
 
     }
