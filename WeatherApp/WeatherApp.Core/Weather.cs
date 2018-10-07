@@ -9,5 +9,6 @@ namespace WeatherApp.Core
     public class Weather
     {
         public string Temperature { get; set; } = " ";
+        public string Pressure { get; set; } = " ";
     }
 }

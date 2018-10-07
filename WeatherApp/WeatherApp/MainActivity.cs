@@ -19,6 +19,8 @@ namespace WeatherApp
 
             var button = FindViewById<Button>(Resource.Id.button1);
             textView = FindViewById<TextView>(Resource.Id.textView1);
+            var button1 = FindViewById<Button>(Resource.Id.button1);
+            textView = FindViewById<TextView>(Resource.Id.textView2);
 
             button.Click += Button_Click;
         }
@@ -27,6 +29,7 @@ namespace WeatherApp
         {
             var weather = await Core.Core.GetWeather("asd");
             textView.Text = weather.Temperature;
+            textView.Text = weather.Pressure;
         }
     }
 }

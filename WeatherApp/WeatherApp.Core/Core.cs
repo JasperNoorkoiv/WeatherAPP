@@ -15,6 +15,7 @@ namespace WeatherApp.Core
             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
             var weather = new Weather();
             weather.Temperature = (string)results["main"]["temp"] + " C";
+            weather.Pressure = (string)results["main"]["temp"] + " hpa";
             return weather;
         }
     }
