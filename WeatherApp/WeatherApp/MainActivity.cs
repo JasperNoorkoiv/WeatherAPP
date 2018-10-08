@@ -15,6 +15,7 @@ namespace WeatherApp
         TextView textView3;
         SearchView searchView;
         Button button;
+        TextView textAvg;
 
 
         protected  override  void OnCreate(Bundle savedInstanceState)
@@ -24,17 +25,18 @@ namespace WeatherApp
             SetContentView(Resource.Layout.activity_main);
 
             button = FindViewById<Button>(Resource.Id.button1);
-            var textView1 = FindViewById<TextView>(Resource.Id.textView1);
-            var textView2= FindViewById<TextView>(Resource.Id.textView2);
-            var textView3 = FindViewById<TextView>(Resource.Id.textView3);
+             textView1 = FindViewById<TextView>(Resource.Id.textView1);
+             textView2= FindViewById<TextView>(Resource.Id.textView2);
+             textView3 = FindViewById<TextView>(Resource.Id.textView3);
             searchView = FindViewById<SearchView>(Resource.Id.searchView1);
+            textAvg = FindViewById<TextView>(Resource.Id.textTempavg);
 
             button.Click += Button_Click;
         }
 
         private async void Button_Click(object sender, System.EventArgs e)
         {
-            var weather = await Core.Core.GetWeather("asd");
+            var weather = await Core.Core.GetWeather(searchView.Query);
             textView1.Text = weather.Temperature;
             textView2.Text = weather.Pressure;
             textView3.Text = weather.Wind;
