@@ -29,7 +29,6 @@ namespace WeatherApp
              textView2= FindViewById<TextView>(Resource.Id.textView2);
              textView3 = FindViewById<TextView>(Resource.Id.textView3);
             searchView = FindViewById<SearchView>(Resource.Id.searchView1);
-            textAvg = FindViewById<TextView>(Resource.Id.textTempavg);
 
             button.Click += Button_Click;
         }
