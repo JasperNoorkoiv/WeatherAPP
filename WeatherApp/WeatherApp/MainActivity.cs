@@ -4,6 +4,7 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using WeatherApp.Core;
+using System.Drawing;
 
 namespace WeatherApp
 {
@@ -16,6 +17,7 @@ namespace WeatherApp
         SearchView searchView;
         Button button;
         TextView textAvg;
+        ImageView weatherIcon;
 
 
         protected  override  void OnCreate(Bundle savedInstanceState)
