@@ -32,6 +32,7 @@ namespace WeatherApp
             textView3 = FindViewById<TextView>(Resource.Id.textView3);
             searchView = FindViewById<SearchView>(Resource.Id.searchView1);
             textAvg = FindViewById<TextView>(Resource.Id.textTempavg);
+            weatherIcon = FindViewById<ImageView>(Resource.Id.weatherIcon);
 
             button.Click += Button_Click;
         }
@@ -43,7 +44,9 @@ namespace WeatherApp
             textView2.Text = weather.Pressure;
             textView3.Text = weather.Wind;
             textAvg.Text = weather.Tempavg;
+            weatherIcon.SetImageResource(Resources.GetIdentifier(weather.ImageName, "drawable", PackageName));
+            
+        
         }
-
     }
 }

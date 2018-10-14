@@ -13,5 +13,6 @@ namespace WeatherApp.Core
         public string Wind { get; set; } = " ";
         public string City { get; set; } = " ";
         public string Tempavg { get; set; } = " ";
+        public string ImageName { get; set; } = " ";
     }
 }

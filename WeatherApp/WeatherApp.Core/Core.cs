@@ -20,7 +20,8 @@ namespace WeatherApp.Core
             weather.Wind = (string)results["wind"]["speed"] + " m/s";
             weather.City = (string)results["name"];
             weather.Tempavg = (string)results["main"]["temp_min"] + " - " + (string)results["main"]["temp_max"] + " C";
-            return weather;
+            weather.ImageName = "_" + (string)results["weather"][0]["icon"];
+            return weather;   
         }
     }
 }
