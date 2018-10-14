@@ -7,7 +7,7 @@
 	android:layout_height="match_parent"
 	android:minWidth="25px"
 	android:minHeight="25px"
-	android:background="@android:color/background_light">
+	android:background="#ffe0f7fa">
 	<LinearLayout
 		android:orientation="vertical"
 		android:minWidth="25px"
@@ -51,6 +51,15 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/textView3"
+			android:foregroundGravity="center"
+			android:gravity="center"
+			android:layout_gravity="center" />
+		<TextView
+			android:text="Large Text"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/textTempavg"
 			android:foregroundGravity="center"
 			android:gravity="center"
 			android:layout_gravity="center" />

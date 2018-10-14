@@ -25,10 +25,11 @@ namespace WeatherApp
             SetContentView(Resource.Layout.activity_main);
 
             button = FindViewById<Button>(Resource.Id.button1);
-             textView1 = FindViewById<TextView>(Resource.Id.textView1);
-             textView2= FindViewById<TextView>(Resource.Id.textView2);
-             textView3 = FindViewById<TextView>(Resource.Id.textView3);
+            textView1 = FindViewById<TextView>(Resource.Id.textView1);
+            textView2= FindViewById<TextView>(Resource.Id.textView2);
+            textView3 = FindViewById<TextView>(Resource.Id.textView3);
             searchView = FindViewById<SearchView>(Resource.Id.searchView1);
+            textAvg = FindViewById<TextView>(Resource.Id.textTempavg);
 
             button.Click += Button_Click;
         }
@@ -39,6 +40,7 @@ namespace WeatherApp
             textView1.Text = weather.Temperature;
             textView2.Text = weather.Pressure;
             textView3.Text = weather.Wind;
+            textAvg.Text = weather.Tempavg;
         }
 
     }
