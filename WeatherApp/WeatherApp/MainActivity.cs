@@ -34,6 +34,7 @@ namespace WeatherApp
             textAvg = FindViewById<TextView>(Resource.Id.textTempavg);
             weatherIcon = FindViewById<ImageView>(Resource.Id.weatherIcon);
 
+
             button.Click += Button_Click;
         }
 
