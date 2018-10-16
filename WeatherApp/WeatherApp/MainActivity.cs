@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Widget;
 using WeatherApp.Core;
 using System.Drawing;
+using Android;
 
 namespace WeatherApp
 {
