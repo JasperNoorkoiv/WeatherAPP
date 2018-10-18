@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -23,7 +22,7 @@ namespace WeatherApp
 
             // Create your application here
 
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.layout1);
         }
     }
 }

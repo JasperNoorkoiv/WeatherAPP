@@ -16,11 +16,13 @@ namespace WeatherApp
     {
         List<string> items;
         Activity context;
+        List<int> images;
 
-        public CustomAdapter(Activity context, List<string> items) : base()
+        public CustomAdapter(Activity context, List<string> items, List<int> images) : base()
         {
             this.context = context;
             this.items = items;
+            this.images = images;
         }
 
         public override string this[int position]
@@ -39,9 +41,16 @@ namespace WeatherApp
         {
             View view = convertView;
             if (view == null)
-                view = context.LayoutInflater.Inflate(Resource.Layout.layout1, null);
+                view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow, null);
 
             view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
+
+            view.FindViewById<TextView>(Resource.Id.date).Text = items[position];
+            view.FindViewById<TextView>(Resource.Id.date).Text = items[position];
+            view.FindViewById<ImageView>(Resource.Id.weatherIcon).SetImageResource(images[position]);
+
+
+
             return view;
         }
     }

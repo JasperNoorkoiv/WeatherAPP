@@ -41,7 +41,7 @@ namespace WeatherApp
 
 
             button.Click += Button_Click;
-            button2.Click += Button_Click;
+            button2.Click += button2_Click;
         }
 
         private async void Button_Click(object sender, System.EventArgs e)
