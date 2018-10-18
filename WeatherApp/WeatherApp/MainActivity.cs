@@ -6,6 +6,8 @@ using Android.Widget;
 using WeatherApp.Core;
 using System.Drawing;
 using Android;
+using System;
+using Android.Content;
 
 namespace WeatherApp
 {
@@ -19,6 +21,7 @@ namespace WeatherApp
         Button button;
         TextView textAvg;
         ImageView weatherIcon;
+        Button button2;
 
 
         protected  override  void OnCreate(Bundle savedInstanceState)
@@ -28,6 +31,7 @@ namespace WeatherApp
             SetContentView(Resource.Layout.activity_main);
 
             button = FindViewById<Button>(Resource.Id.button1);
+            button2 = FindViewById<Button>(Resource.Id.button2);
             textView1 = FindViewById<TextView>(Resource.Id.textView1);
             textView2= FindViewById<TextView>(Resource.Id.textView2);
             textView3 = FindViewById<TextView>(Resource.Id.textView3);
@@ -37,6 +41,7 @@ namespace WeatherApp
 
 
             button.Click += Button_Click;
+            button2.Click += Button_Click;
         }
 
         private async void Button_Click(object sender, System.EventArgs e)
@@ -47,8 +52,12 @@ namespace WeatherApp
             textView3.Text = weather.Wind;
             textAvg.Text = weather.Tempavg;
             weatherIcon.SetImageResource(Resources.GetIdentifier(weather.ImageName, "drawable", PackageName));
-            
-        
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(_5dayActivity));
+            intent.PutExtra("searchView", searchView.Query);
+            StartActivity(intent);
         }
     }
 }

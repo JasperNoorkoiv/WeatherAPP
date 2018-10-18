@@ -23,7 +23,7 @@
 			android:src="@android:drawable/ic_menu_gallery"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:id="@+id/icon"
+			android:id="@+id/weatherIcon"
 			android:minWidth="100px"
 			android:minHeight="100px"/>
 		<TextView

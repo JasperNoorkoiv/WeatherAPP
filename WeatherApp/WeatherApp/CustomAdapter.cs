@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace ListViewExample
+namespace WeatherApp
 {
     public class CustomAdapter : BaseAdapter<string>
     {
@@ -39,7 +39,7 @@ namespace ListViewExample
         {
             View view = convertView;
             if (view == null)
-                view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow, null);
+                view = context.LayoutInflater.Inflate(Resource.Layout.layout1, null);
 
             view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
             return view;
