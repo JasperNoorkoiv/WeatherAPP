@@ -8,6 +8,8 @@ using System.Drawing;
 using Android;
 using System;
 using Android.Content;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace WeatherApp
 {
@@ -41,7 +43,7 @@ namespace WeatherApp
 
 
             button.Click += Button_Click;
-            button2.Click += button2_Click;
+            button2.Click += button2_ClickAsync;
         }
 
         private async void Button_Click(object sender, System.EventArgs e)
@@ -53,11 +55,22 @@ namespace WeatherApp
             textAvg.Text = weather.Tempavg;
             weatherIcon.SetImageResource(Resources.GetIdentifier(weather.ImageName, "drawable", PackageName));
         }
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_ClickAsync(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(_5dayActivity));
-            intent.PutExtra("searchView", searchView.Query);
+            await GetForecast();
+            Intent intent = new Intent(this, typeof(FiveDayActivity));
             StartActivity(intent);
         }
+
+
+            private async Task<List<Weather>> GetForecast()
+            {
+                List<Core.Weather> weather = await Core.FiveDayCore.GetWeather(FindViewById<SearchView>(Resource.Id.searchView1).Query);
+                Core.Weathers.weathers = weather;
+
+                return weather;
+            }
+
+        }
     }
-}
+     

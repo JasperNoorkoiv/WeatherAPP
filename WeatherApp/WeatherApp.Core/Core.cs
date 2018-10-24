@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
+
 
 namespace WeatherApp.Core
 {
@@ -21,7 +23,7 @@ namespace WeatherApp.Core
             weather.City = (string)results["name"];
             weather.Tempavg = (string)results["main"]["temp_min"] + " - " + (string)results["main"]["temp_max"] + " C";
             weather.ImageName = "_" + (string)results["weather"][0]["icon"];
-            return weather;   
+            return weather;
         }
     }
 }

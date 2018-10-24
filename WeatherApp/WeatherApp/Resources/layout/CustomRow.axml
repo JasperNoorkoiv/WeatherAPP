@@ -1,44 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
-	<LinearLayout
-		android:orientation="horizontal"
-		android:minWidth="25px"
-		android:minHeight="25px"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<AbsoluteLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+	<TextView
+		android:text="London"
+		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/linearLayout1"
-		android:layout_marginBottom="50px">
-		<TextView
-			android:text="date"
-			android:textAppearance="?android:attr/textAppearanceSmall"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:id="@+id/date"
-			android:layout_margin="5px" />
-		<ImageView
-			android:src="@android:drawable/ic_menu_gallery"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:id="@+id/weatherIcon"
-			android:minWidth="100px"
-			android:minHeight="100px"/>
-		<TextView
-			android:text="tempHigh"
-			android:textAppearance="?android:attr/textAppearanceMedium"
-			android:layout_width="wrap_content"
-			android:layout_height="match_parent"
-			android:id="@+id/tempHigh" />
-		<TextView
-			android:text="Small Text"
-			android:textAppearance="?android:attr/textAppearanceSmall"
-			android:layout_width="wrap_content"
-			android:layout_height="match_parent"
-			android:id="@+id/tempLow"
-			android:layout_marginLeft="24px" />
-	</LinearLayout>
-
-</LinearLayout>
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_x="30px"
+		android:textStyle="bold"
+		android:id="@+id/input"
+		android:gravity="left"
+		android:capitalize="words" />
+	<TextView
+		android:text="20 Nov, Sun"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/date"
+		android:gravity="left"
+		android:layout_x="30px"
+		android:layout_y="120px"	/>
+	<ImageView
+		android:src="@android:drawable/ic_menu_gallery"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_y="10px"
+		android:layout_x="310px"
+		android:id="@+id/Layout1Image" />
+	<TextView
+		android:text="12C"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/tempHigh"
+		android:gravity="left"
+		android:layout_x="410px"
+		android:layout_y="40px"	/>	
+	<TextView
+		android:text="6m/s"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/humidity"
+		android:gravity="left"
+		android:layout_x="520px"
+		android:layout_y="40px"	/>	
+	
+	</AbsoluteLayout>
+</RelativeLayout>

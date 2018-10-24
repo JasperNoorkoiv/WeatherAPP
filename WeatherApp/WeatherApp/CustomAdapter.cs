@@ -12,25 +12,23 @@ using Android.Widget;
 
 namespace WeatherApp
 {
-    public class CustomAdapter : BaseAdapter<string>
+    public class CustomAdapter : BaseAdapter<Core.Weather>
     {
-        List<string> items;
+        List<Core.Weather> weathers;
         Activity context;
-        List<int> images;
 
-        public CustomAdapter(Activity context, List<string> items, List<int> images) : base()
+        public CustomAdapter(Activity context, List<Core.Weather> items) : base()
         {
             this.context = context;
-            this.items = items;
-            this.images = images;
+            this.weathers = items;
         }
 
-        public override string this[int position]
+        public override Core.Weather this[int position]
         {
-            get { return items[position]; }
+            get { return weathers[position]; }
         }
 
-        public override int Count { get { return items.Count; } }
+        public override int Count { get { return weathers.Count; } }
 
         public override long GetItemId(int position)
         {
@@ -40,16 +38,16 @@ namespace WeatherApp
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             View view = convertView;
+
             if (view == null)
+            {
                 view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow, null);
-
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
-
-            view.FindViewById<TextView>(Resource.Id.date).Text = items[position];
-            view.FindViewById<TextView>(Resource.Id.date).Text = items[position];
-            view.FindViewById<ImageView>(Resource.Id.weatherIcon).SetImageResource(images[position]);
-
-
+            }
+            //DateTime date = Convert.ToDateTime(weathers[position].Date);
+            //string day = date.ToString("dddd").Substring(0, 3) + " " + date.ToString("HH:mm");
+            //view.FindViewById<TextView>(Resource.Id.SDate).Text = day;
+            //view.FindViewById<TextView>(Resource.Id.STemp).Text = weathers[position].Temperature;
+            view.FindViewById<ImageView>(Resource.Id.Layout1Image).SetImageResource(Resource.Drawable._01d);
 
             return view;
         }
