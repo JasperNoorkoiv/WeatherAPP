@@ -12,8 +12,8 @@ namespace WeatherApp.Core
                                                                                                                                                                             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
 
             var weather0 = new Weather();
-            weather0.Temperature = (string)results["list"][1]["main"]["temp"] + "c";
-            weather0.Wind = (string)results["list"][1]["wind"]["speed"] + " m/s";
+            weather0.Temperature = (string)results["list"][1]["main"]["temp"] + " C  ";
+            weather0.Wind = (string)results["list"][1]["wind"]["speed"] + "  m/s ";
             weather0.Main = (string)results["list"][1]["weather"][0]["main"];
             weather0.Date = (string)results["list"][1]["dt_txt"];
             weather0.AirPressure = (string)results["list"][1]["main"]["pressure"] + " hpa";
@@ -22,8 +22,8 @@ namespace WeatherApp.Core
             weathers.Add(weather0);
 
             var weather1 = new Weather();
-            weather1.Temperature = (string)results["list"][9]["main"]["temp"] + "c";
-            weather1.Wind = (string)results["list"][9]["wind"]["speed"] + " m/s";
+            weather1.Temperature = (string)results["list"][9]["main"]["temp"] + " C  ";
+            weather1.Wind = (string)results["list"][9]["wind"]["speed"] + "  m/s ";
             weather1.Main = (string)results["list"][9]["weather"][0]["main"];
             weather1.Date = (string)results["list"][9]["dt_txt"];
             weather1.AirPressure = (string)results["list"][9]["main"]["pressure"] + " hpa";
@@ -32,8 +32,8 @@ namespace WeatherApp.Core
             weathers.Add(weather1);
 
             var weather2 = new Weather();
-            weather2.Temperature = (string)results["list"][17]["main"]["temp"] + "c";
-            weather2.Wind = (string)results["list"][17]["wind"]["speed"] + " m/s";
+            weather2.Temperature = (string)results["list"][17]["main"]["temp"] + " C  ";
+            weather2.Wind = (string)results["list"][17]["wind"]["speed"] + "  m/s ";
             weather2.Main = (string)results["list"][17]["weather"][0]["main"];
             weather2.Date = (string)results["list"][17]["dt_txt"];
             weather2.AirPressure = (string)results["list"][17]["main"]["pressure"] + " hpa";
@@ -42,8 +42,8 @@ namespace WeatherApp.Core
             weathers.Add(weather2);
 
             var weather3 = new Weather();
-            weather3.Temperature = (string)results["list"][25]["main"]["temp"] + "c";
-            weather3.Wind = (string)results["list"][25]["wind"]["speed"] + " m/s";
+            weather3.Temperature = (string)results["list"][25]["main"]["temp"] + " C  ";
+            weather3.Wind = (string)results["list"][25]["wind"]["speed"] + " m/s ";
             weather3.Main = (string)results["list"][25]["weather"][0]["main"];
             weather3.Date = (string)results["list"][25]["dt_txt"];
             weather3.AirPressure = (string)results["list"][25]["main"]["pressure"] + " hpa";
@@ -52,8 +52,8 @@ namespace WeatherApp.Core
             weathers.Add(weather3);
 
             var weather4 = new Weather();
-            weather4.Temperature = (string)results["list"][33]["main"]["temp"] + "c";
-            weather4.Wind = (string)results["list"][33]["wind"]["speed"] + " m/s";
+            weather4.Temperature = (string)results["list"][33]["main"]["temp"] + " C  ";
+            weather4.Wind = (string)results["list"][33]["wind"]["speed"] + " m/s ";
             weather4.Main = (string)results["list"][33]["weather"][0]["main"];
             weather4.Date = (string)results["list"][33]["dt_txt"];
             weather4.AirPressure = (string)results["list"][33]["main"]["pressure"] + " hpa";

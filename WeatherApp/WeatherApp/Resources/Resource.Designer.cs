@@ -2266,26 +2266,8 @@ namespace WeatherApp
 			// aapt resource value: 0x7f020060
 			public const int avd_hide_password = 2130837600;
 			
-			// aapt resource value: 0x7f020077
-			public const int avd_hide_password_1 = 2130837623;
-			
-			// aapt resource value: 0x7f020078
-			public const int avd_hide_password_2 = 2130837624;
-			
-			// aapt resource value: 0x7f020079
-			public const int avd_hide_password_3 = 2130837625;
-			
 			// aapt resource value: 0x7f020061
 			public const int avd_show_password = 2130837601;
-			
-			// aapt resource value: 0x7f02007a
-			public const int avd_show_password_1 = 2130837626;
-			
-			// aapt resource value: 0x7f02007b
-			public const int avd_show_password_2 = 2130837627;
-			
-			// aapt resource value: 0x7f02007c
-			public const int avd_show_password_3 = 2130837628;
 			
 			// aapt resource value: 0x7f020062
 			public const int design_bottom_navigation_item_background = 2130837602;
